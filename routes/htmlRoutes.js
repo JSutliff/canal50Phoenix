@@ -1,4 +1,5 @@
 const path = require("path");
+require("dotenv").config();
 var router = require("express").Router();
 
 const sgMail = require("@sendgrid/mail");

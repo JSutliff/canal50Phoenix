@@ -20,6 +20,7 @@
   "homepage": "https://github.com/JSutliff/canal50Phoenix#readme",
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
   }
 }
