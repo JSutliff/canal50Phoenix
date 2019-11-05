@@ -1,0 +1,25 @@
+{
+  "name": "canal50Phoenix",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JSutliff/canal50Phoenix.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSutliff/canal50Phoenix/issues"
+  },
+  "homepage": "https://github.com/JSutliff/canal50Phoenix#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "express": "^4.17.1"
+  }
+}
