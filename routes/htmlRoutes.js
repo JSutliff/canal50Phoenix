@@ -10,7 +10,7 @@ router.post("/email", (req, res) => {
   // res.json({ message: "Message received!!" });
 
   const msg = {
-    to: "jbopsut@gmail.com",
+    to: "dave@davidprimm.com",
     from: req.body.userEmail,
     subject: req.body.userEmailSubject,
     text: req.body.userEmailMessage
