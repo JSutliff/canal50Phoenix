@@ -22,13 +22,19 @@ html {
 
 .nav-link {
   font-size: 20px;
-  color: white;
+  color: #7a3437;
+  text-transform: uppercase;
+  text-decoration: underline;
 }
 
 .tagline {
   font-size: 35px;
-  color: white;
+  color: #7e7f7f;
   margin-top: 150px;
+}
+
+.advertiseBtn {
+  background-color: goldenrod;
 }
 
 .channelRow {
@@ -56,4 +62,5 @@ form .row {
 
 #emailBtn {
   margin-top: 20px;
+  background-color: #7e7f7f;
 }
