@@ -64,3 +64,11 @@ form .row {
   margin-top: 20px;
   background-color: #7e7f7f;
 }
+
+#advertiseContainer {
+  background-color: white;
+}
+
+#advertiseEmailBtn {
+  background-color: goldenrod;
+}
