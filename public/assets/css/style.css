@@ -3,6 +3,7 @@ html {
   height: 100%;
   background-color: #050616;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
 }
 
 .hero-image {
@@ -20,55 +21,135 @@ html {
   position: relative;
 }
 
-.nav-link {
-  font-size: 20px;
+.navBar {
+  overflow: hidden;
+  height: 63px;
+}
+
+.navBar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navBar ul {
+  margin: 8px 0 0 0;
+  list-style: none;
+}
+
+.navBar a:hover {
   color: #7a3437;
-  text-transform: uppercase;
-  text-decoration: underline;
 }
 
-.tagline {
-  font-size: 35px;
-  color: #7e7f7f;
-  margin-top: 150px;
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
 }
 
-.advertiseBtn {
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #ccc;
+  display: block;
+  transition: 0.3s;
+}
+
+.side-nav a:hover {
+  color: #fff;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#tagline {
+  transition: margin-left 0.5s;
+  padding: 20px;
+  overflow: hidden;
+
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+#tagline button {
   background-color: goldenrod;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 17px;
 }
 
-.channelRow {
-  margin-bottom: 40px;
+#channelContainer {
+  width: 80%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .channelNumber {
+  font-size: 26px;
+}
+
+.channelDescription {
+  font-size: 20px;
+}
+
+form {
   color: white;
-  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.channelDiscription {
-  color: white;
-  font-size: 18px;
+form input {
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
-#formContainer {
-  margin-top: 50px;
-  color: white;
+form textarea {
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
-form .row {
-  margin-top: 7px;
+form button {
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #707a91;
 }
 
-#emailBtn {
-  margin-top: 20px;
-  background-color: #7e7f7f;
-}
-
-#advertiseContainer {
-  background-color: white;
-}
-
-#advertiseEmailBtn {
-  background-color: goldenrod;
+@media (max-width: 700px) {
+  .navBar-items {
+    display: none;
+  }
 }
