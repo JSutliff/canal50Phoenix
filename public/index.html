@@ -11,7 +11,7 @@
     <title>Phoenix TV - Canal 50</title>
   </head>
   <body>
-    <header class="hero-image">
+    <header class="hero-image" id="home">
       <nav class="navBar">
         <span class="open-slide">
           <a href="#" onclick="openSlideMenu()">
@@ -24,19 +24,19 @@
         </span>
 
         <ul class="navBar-items">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Channels</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Advertise</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#channelContainer">Channels</a></li>
+          <li><a href="#contactForm">Contact</a></li>
+          <li><a href="/advertise">Advertise</a></li>
         </ul>
       </nav>
 
       <div id="side-menu" class="side-nav">
         <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-        <a href="#">Home</a>
-        <a href="#">Channels</a>
-        <a href="#">Contact</a>
-        <a href="#">Advertise</a>
+        <a href="#home">Home</a>
+        <a href="#channelContainer">Channels</a>
+        <a href="#contactForm">Contact</a>
+        <a href="/advertise">Advertise</a>
       </div>
 
       <div id="tagline">
@@ -181,21 +181,25 @@
       </div>
     </main>
 
-    <form action="/email">
-      <h2>Conact Us</h2>
-      <input type="text" placeholder="Name" />
-      <input type="text" placeholder="Email" />
-      <input type="text" placeholder="Subject" />
+    <form action="/email" method="post" id="contactForm">
+      <h2>Say Hello</h2>
+      <input type="text" placeholder="Name" name="userName" />
+      <input type="text" placeholder="Email" name="userEmail" />
+      <input type="text" placeholder="Subject" name="userEmailSubject" />
       <textarea
-        name="message"
+        name="userEmailMessage"
         id=""
         cols="30"
         rows="10"
         placeholder="Message"
       ></textarea>
 
-      <button type="submit">Submit</button>
+      <button type="submit">Contact Us</button>
     </form>
+
+    <footer>
+      <p>© 2019 Canal 50</p>
+    </footer>
 
     <script src="./assets/js/script.js"></script>
   </body>

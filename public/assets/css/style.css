@@ -97,7 +97,7 @@ html {
   background-color: goldenrod;
   padding: 12px;
   border-radius: 5px;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 #channelContainer {
@@ -144,8 +144,18 @@ form button {
   margin-bottom: 10px;
   padding: 12px;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 18px;
   background-color: #707a91;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  font-size: 17px;
+  background-color: #050616;
+  color: #321c47;
+  text-align: center;
 }
 
 @media (max-width: 700px) {
