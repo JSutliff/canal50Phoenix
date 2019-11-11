@@ -100,6 +100,11 @@ html {
   border-radius: 5px;
   font-size: 18px;
   border: 0;
+  box-shadow: 2px 2px 7px 4px #d0d0d0;
+}
+
+#tagline button:hover {
+  cursor: pointer;
 }
 
 #channelContainer {
@@ -162,6 +167,10 @@ form button {
   font-size: 18px;
   background-color: #707a91;
   border: 0;
+}
+
+form button:hover {
+  cursor: pointer;
 }
 
 .modal {
