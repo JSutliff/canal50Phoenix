@@ -8,12 +8,12 @@ const closeSlideMenu = () => {
   document.getElementById("tagline").style.marginLeft = "0px";
 };
 
-const openModal = () => {
-  const modal = document.getElementById("simpleModal");
-  modal.style.display = "block";
-};
+// const openModal = () => {
+//   const modal = document.getElementById("simpleModal");
+//   modal.style.display = "block";
+// };
 
-const closeModal = () => {
-  const modal = document.getElementById("simpleModal");
-  modal.style.display = "none";
-};
+// const closeModal = () => {
+//   const modal = document.getElementById("simpleModal");
+//   modal.style.display = "none";
+// };
