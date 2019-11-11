@@ -192,10 +192,20 @@
         cols="30"
         rows="10"
         placeholder="Message"
+        spellcheck="true"
       ></textarea>
 
-      <button type="submit">Contact Us</button>
+      <button type="submit" id="contactBtn" onclick="openModal()">
+        Contact Us
+      </button>
     </form>
+
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <span class="closeBtn" onclick="closeModal()">&times;</span>
+        <p>Hello... I am a modal</p>
+      </div>
+    </div>
 
     <footer>
       <p>© 2019 Canal 50</p>

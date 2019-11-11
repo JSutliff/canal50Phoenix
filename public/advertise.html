@@ -7,159 +7,84 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-
-    <link rel="stylesheet" href="./assets/css/style.css" />
-
-    <title>Phoenix TV - Advertise</title>
+    <link rel="stylesheet" href="./assets/css/advertiseStyle.css" />
+    <title>Phoenix TV - Canal 50</title>
   </head>
   <body>
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active" href="/">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/#channelDisplay">Channels</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/#formContainer">Contact</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/advertise">Advertise</a>
-      </li>
-    </ul>
-    <div class="container" id="advertiseContainer">
-      <h1>Advertise</h1>
+    <header class="hero-image" id="home">
+      <nav class="navBar">
+        <span class="open-slide">
+          <a href="#" onclick="openSlideMenu()">
+            <svg width="30" height="30">
+              <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
+              <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
+              <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
+            </svg>
+          </a>
+        </span>
 
-      <h2>Canal 50 - KFPB Phoenix</h2>
-      <h3>Turn on the excitement</h3>
-      <p>
-        For information regarding advertising your business, product, event or
-        services on Canal 50 please contact us for a fast reply.
-      </p>
-      <p>Max Marquez</p>
-      <p>Sales Manager</p>
-      <p>(602)633-5514</p>
+        <ul class="navBar-items">
+          <li><a href="/#home">Home</a></li>
+          <li><a href="/#channelContainer">Channels</a></li>
+          <li><a href="/#contactForm">Contact</a></li>
+          <li><a href="/advertise">Advertise</a></li>
+        </ul>
+      </nav>
 
-      <!-- FORM -->
+      <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="#home">Home</a>
+        <a href="#channelContainer">Channels</a>
+        <a href="#contactForm">Contact</a>
+        <a href="/advertise">Advertise</a>
+      </div>
 
-      <div id="formContainer">
-        <form>
-          <h1 class="text-center">Contact Us</h1>
-          <div class="row justify-content-center">
-            <div class="col-6">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Name"
-                name="name"
-                id="nameInput"
-              />
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-6">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Email"
-                name="email"
-                id="emailInput"
-              />
-            </div>
-          </div>
+      <div id="advertiseContainer">
+        <h1>CANAL 50 KFPB PHOENIX</h1>
+        <h2>Turn On The Excitement</h2>
+        <p>
+          For information regarding advertising your business, product, event or
+          services on Canal 50 please contact us for a fast reply.
+        </p>
+        <p>
+          Max Marquez <br />
+          Sales Manager <br />
+          (602)633-5514
+        </p>
+        <form action="/email" method="post" id="contactForm">
+          <h2>Advertise</h2>
+          <input type="text" placeholder="Name" name="userName" />
+          <input type="text" placeholder="Email" name="userEmail" />
+          <input type="text" placeholder="Subject" name="userEmailSubject" />
+          <textarea
+            name="userEmailMessage"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Message"
+            spellcheck="true"
+          ></textarea>
 
-          <div class="row justify-content-center">
-            <div class="col-6">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="Subject"
-                name="emailSubject"
-                id="emailSubjectInput"
-              />
-            </div>
-          </div>
-
-          <div class="row justify-content-center">
-            <div class="col-6">
-              <textarea
-                class="form-control"
-                rows="3"
-                placeholder="Message"
-                name="emailMessage"
-                id="emailMessageText"
-              ></textarea>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <button
-              type="submit"
-              class="btn btn-primary mb-2"
-              id="advertiseEmailBtn"
-              data-toggle="modal"
-              data-target="#sentModal"
-            >
-              Send
-            </button>
-          </div>
+          <button type="submit" id="contactBtn" onclick="openModal()">
+            Contact Us
+          </button>
         </form>
       </div>
-      <!-- MODAL -->
-      <div class="modal" tabindex="-1" role="dialog" id="sentModal">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Message Sent</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Your email was sent, we will be in contact soon.</p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
+    </header>
+
+    <main></main>
+
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <span class="closeBtn" onclick="closeModal()">&times;</span>
+        <p>Hello... I am a modal</p>
       </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+    <footer>
+      <p>© 2019 Canal 50</p>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>

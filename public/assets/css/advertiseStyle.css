@@ -9,7 +9,7 @@ html {
 
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../images/hero.jpeg");
 
   /* Set a specific height */
@@ -102,21 +102,13 @@ html {
   border: 0;
 }
 
-#channelContainer {
-  width: 80%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+#advertiseContainer {
   text-align: center;
+  color: white;
 }
 
-.channelNumber {
-  font-size: 26px;
-}
-
-.channelDescription {
-  font-size: 20px;
+#advertiseContainer p {
+  font-size: 18px;
 }
 
 form {
