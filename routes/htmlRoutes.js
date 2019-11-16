@@ -1,6 +1,6 @@
 const path = require("path");
 require("dotenv").config();
-var router = require("express").Router();
+const router = require("express").Router();
 
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -29,10 +29,6 @@ router.get("/", (req, res) => {
 
 router.get("/advertise", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/advertise.html"));
-});
-
-router.get("/hello", (req, res) => {
-  res.send("Hello World");
 });
 
 module.exports = router;
