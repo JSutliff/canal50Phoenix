@@ -21,7 +21,7 @@ router.get("/phoenix-local-television-advertising", (req, res) => {
 
 router.post("/phoenix-tv-ads", (req, res) => {
   const msg = {
-    to: "contact@canal50phoenix.com",
+    to: "dave@davidprimm.com",
     from: req.body.userEmailInput,
     subject: "[!URGENT] Email From Canal 50 Website",
     text: `${req.body.userMessageInput}
