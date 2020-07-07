@@ -1,90 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="description"
+      content="Page description. No longer than 155 characters."
     />
-    <link rel="stylesheet" href="./assets/css/advertiseStyle.css" />
-    <title>Phoenix TV - Advertise</title>
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Title Here" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.canal50phoenix.com/" />
+    <meta property="og:image" content="http://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
+
+    <!-- Styles -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Canal 50 | Phoenix TV</title>
   </head>
   <body>
-    <header class="hero-image" id="home">
-      <nav class="navBar">
-        <span class="open-slide">
-          <a href="#" onclick="openSlideMenu()">
-            <svg width="30" height="30">
-              <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
-              <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
-              <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
-            </svg>
-          </a>
-        </span>
+    <!-- Slide Nav -->
+    <!-- Hamburger Menu -->
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler" id="toggler" />
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul id="toggleMenu">
+              <a href="/"
+                ><img src="./assets/images/canal-50-phoenix-logo.png" alt=""
+              /></a>
+              <li><a href="/">Home</a></li>
+              <li><a href="https://nuestranoticias.com/">News</a></li>
+              <li><a href="/#channel-display">Channels</a></li>
+              <li><a href="/#contact-form">Contact</a></li>
+              <li><a href="#">Advertise</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END RESPONSIVE MENU -->
 
-        <ul class="navBar-items">
-          <li><a href="/#home">Home</a></li>
-          <li><a href="/#channelContainer">Channels</a></li>
-          <li><a href="/#contactForm">Contact</a></li>
-          <li><a href="/advertise">Advertise</a></li>
+    <!-- SHowcase -->
+    <header>
+      <!-- Top Nav -->
+      <nav id="top-nav" class="hide-responsive">
+        <ul id="top-nav-list">
+          <!-- <a href="index.html" class="grow"
+            ><img
+              src="./canal-50-phoenix-logo.png"
+              id="header-img"
+              alt="canal-50-phoenix-logo"
+          /></a> -->
+          <li class="top-nav-item grow">
+            <a href="/">Home</a>
+          </li>
+          <li class="top-nav-item grow">
+            <a href="https://nuestranoticias.com/">News</a>
+          </li>
+          <li class="top-nav-item grow">
+            <a href="/#channel-display">Channels</a>
+          </li>
+          <li class="top-nav-item grow">
+            <a href="/#contact-form">Contact</a>
+          </li>
+          <li class="top-nav-item grow"><a href="#">Advertise</a></li>
         </ul>
       </nav>
-
-      <div id="side-menu" class="side-nav">
-        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-        <a href="/#home">Home</a>
-        <a href="/#channelContainer">Channels</a>
-        <a href="/#contactForm">Contact</a>
-        <a href="/advertise">Advertise</a>
-      </div>
-
-      <div id="advertiseContainer">
-        <h1>CANAL 50 KFPB PHOENIX</h1>
-        <h2>Turn On The Excitement</h2>
-        <p>
-          For information regarding advertising your business, product, event or
-          services on Canal 50 please contact us for a fast reply.
-        </p>
-        <p>
-          Max Marquez <br />
-          Sales Manager <br />
-          (602)633-5514
-        </p>
-        <form action="/email" method="post" id="contactForm">
-          <h2>Advertise</h2>
-          <input type="text" placeholder="Name" name="userName" />
-          <input type="text" placeholder="Email" name="userEmail" />
-          <input type="text" placeholder="Subject" name="userEmailSubject" />
-          <textarea
-            name="userEmailMessage"
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Message"
-            spellcheck="true"
-          ></textarea>
-
-          <button type="submit" id="contactBtn" onclick="openModal()">
-            Contact Us
-          </button>
-        </form>
-      </div>
     </header>
 
-    <main>
-      <footer>
-        <p>© 2019 Canal 50</p>
-      </footer>
-    </main>
+    <!-- Contact -->
 
-    <!-- <div id="simpleModal" class="modal">
-      <div class="modal-content">
-        <span class="closeBtn" onclick="closeModal()">&times;</span>
-        <p>Hello... I am a modal</p>
+    <form id="advertise-form">
+      <img
+        src="./assets/images/canal-50-phoenix-logo.png"
+        alt=""
+        width="300px"
+      />
+      <h1>Canal 50 KFPB Phoenix</h1>
+      <p id="advertise-description">
+        For information regarding advertising your business, product, event or
+        services on Canal 50 please contact us for a fast reply.
+      </p>
+      <h2>Advertise With Us!</h2>
+
+      <input type="text" placeholder="Name" name="userName" id="userName" />
+      <input type="text" placeholder="Email" name="userEmail" id="userEmail" />
+      <textarea
+        name="userEmailMessage"
+        id="userEmailMessage"
+        cols="30"
+        rows="10"
+        placeholder="Message"
+        spellcheck="true"
+      ></textarea>
+
+      <button id="contactBtn" class="shadow"">
+        Send Us An Email
+      </button>
+    </form>
+    <!-- END CONTACT -->
+    <!-- Modal -->
+    <div class="modal-overlay hide-modal" id="modal-overlay"></div>
+
+    <div class="modal hide-modal" id="modal">
+      <div class="modal-guts">
+        <h2>Thank you for contacting Canal 50</h2>
+        <p>
+          You should hear back from us very soon.
+        </p>
       </div>
-    </div> -->
-
+    </div>
+    <!-- END MODAL -->
+    <!-- Footer -->
+    <footer>
+      <p id="copywrite">
+        Copyright&copy; Canal 50 Phoenix 2020. All Rights Reserved.
+      </p>
+      <p id="built-by">
+        Website built and maintained by: <br />
+        <a href="http://www.goldenstatewebservices.com"
+          >Golden State Web Services</a
+        >
+      </p>
+    </footer>
+    <!-- END FOOTER -->
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

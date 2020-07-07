@@ -1,216 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="description"
+      content="Canal 50 broadcasts a range of Mexican television programming in Phoenix, Arizona. It includes networks such as Nuestra Vision, ESNE TV and Stadium."
+    />
+
+    <meta
+      name="keywords"
+      content="Phoenix Arizona, TV advertising, antena tv, cable cutters, Arizona advertising, Phoenix tv guide, Arizona TV guide, Phoenix tv listings, arizona tv listins, nuestra vision phoenix, antenna tv phoenix, mexican tv phoenix"
+    />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="summary" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Canal 50 Phoenix" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.canal50phoenix.com/" />
+    <meta
+      property="og:description"
+      content="Canal 50 broadcasts a range of Mexican television programming in Phoenix, Arizona. It includes networks such as Nuestra Vision, ESNE TV and Stadium."
+    />
+
+    <!-- Styles -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Phoenix TV - Canal 50</title>
+    <title>Canal 50 | Phoenix TV</title>
   </head>
   <body>
-    <header class="hero-image" id="home">
-      <nav class="navBar">
-        <span class="open-slide">
-          <a href="#" onclick="openSlideMenu()">
-            <svg width="30" height="30">
-              <path d="M0,5 30,5" stroke="#fff" stroke-width="5" />
-              <path d="M0,14 30,14" stroke="#fff" stroke-width="5" />
-              <path d="M0,23 30,23" stroke="#fff" stroke-width="5" />
-            </svg>
-          </a>
-        </span>
+    <!-- Slide Nav -->
+    <!-- Hamburger Menu -->
+    <div class="menu-wrap">
+      <input type="checkbox" class="toggler" id="toggler" />
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul id="toggleMenu">
+              <img
+                src="./assets/images/canal-50-phoenix-logo.png"
+                alt="Canal 50 Phoenix TV advertising logo"
+              />
+              <li><a href="https://nuestranoticias.com/">News</a></li>
+              <li><a href="#channel-display">Channels</a></li>
+              <li><a href="#contact-form">Contact</a></li>
+              <li>
+                <a href="/phoenix-local-television-advertising">Advertise</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END RESPONSIVE MENU -->
 
-        <ul class="navBar-items">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#channelContainer">Channels</a></li>
-          <li><a href="#contactForm">Contact</a></li>
-          <li><a href="/advertise">Advertise</a></li>
+    <!-- SHowcase -->
+    <header class="showcase">
+      <!-- Top Nav -->
+      <nav id="top-nav" class="hide-responsive">
+        <ul id="top-nav-list">
+          <img
+            src="./assets/images/canal-50-phoenix-logo.png"
+            id="header-img"
+            alt="Canal 50 Phoenix TV advertising logo"
+          />
+          <li class="top-nav-item grow">
+            <a href="https://nuestranoticias.com/">News</a>
+          </li>
+          <li class="top-nav-item grow">
+            <a href="#channel-display">Channels</a>
+          </li>
+          <li class="top-nav-item grow"><a href="#contact-form">Contact</a></li>
+          <li class="top-nav-item grow">
+            <a href="/phoenix-local-television-advertising">Advertise</a>
+          </li>
         </ul>
       </nav>
-
-      <div id="side-menu" class="side-nav">
-        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-        <a href="#home">Home</a>
-        <a href="#channelContainer">Channels</a>
-        <a href="#contactForm">Contact</a>
-        <a href="/advertise">Advertise</a>
-      </div>
-
-      <div id="tagline">
-        <h1>Turn On The Excitement</h1>
-        <a href="/advertise"><button class="advertiseBtn">Advertise</button></a>
+      <!-- END TOP NAV -->
+      <div class="container showcase-inner">
+        <h1>Canal 50 Phoenix</h1>
+        <h2 id="tag-line">Turn On The Excitement</h2>
+        <a href="/phoenix-local-television-advertising" class="cta-btn shadow"
+          >Advertise With Us!</a
+        >
       </div>
     </header>
 
-    <main>
-      <div id="channelContainer">
-        <!-- 50.1 -->
-        <div id="channel50-1" class="channel">
-          <a href="https://nuestravision.tv/" target="_blank"
-            ><img
+    <!-- END SHOWCASE -->
+
+    <!-- Channels -->
+    <section id="channel-display">
+      <h1 class="section-title">Channels</h1>
+      <!-- 50.1 -->
+      <div id="channel50-1" class="channel">
+        <a href="https://nuestravision.tv/" target="_blank"
+          ><figure>
+            <img
               src="http://nebula.wsimg.com/29333aefe589ee6ad260361659f11e4f?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
-              alt=""
-          /></a>
-          <p class="channelNumber">50.1</p>
-          <p class="channelDescription">
-            Nuestra Vision is the first 100% authentic Mexican Tv channel.
-            Nuestra Vision is focused on Mexicans, made by Mexicans and
-            transmitted from Mexico. Featuring Movies, Sports and News all from
-            Mexico. Neustra Vision is owned by Mexican business man Carlos
-            Slim's cell phone company, American Movil
-          </p>
-        </div>
+              alt="nuestra-vision-phoenix-logo"
+            />
+            <figcaption class="channel-number">Channel: 50.1</figcaption>
+          </figure></a
+        >
 
-        <!-- 50.2 -->
+        <p class="channel-description">
+          Nuestra Vision is the first 100% authentic Mexican Tv channel. Nuestra
+          Vision is focused on Mexicans, made by Mexicans and transmitted from
+          Mexico. Featuring Movies, Sports and News all from Mexico. Neustra
+          Vision is owned by Mexican business man Carlos Slim's cell phone
+          company, American Movil
+        </p>
+      </div>
 
-        <div id="channel50-2" class="channel">
-          <a
-            href="https://elsembradorministries.com/tv/esne-en-tu-pais/estados-unidos/"
-            target="_blank"
-            ><img
+      <!-- 50.2 -->
+
+      <div id="channel50-2" class="channel">
+        <a
+          href="https://elsembradorministries.com/tv/esne-en-tu-pais/estados-unidos/"
+          target="_blank"
+          ><figure>
+            <img
               src="http://nebula.wsimg.com/2ebf431916625142d5b444dd20d3f3dd?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
               alt=""
-          /></a>
-          <p class="channelNumber">50.2</p>
-          <p class="channelDescription">
-            ESNE TV is a Spanish Catholic channel that unites all Hispanics
-            transmitting from studios in California. ESNE delivers dynamic,
-            cultural and educational programming for the youth and the whole
-            family.
-          </p>
-        </div>
+            />
+            <figcaption class="channel-number">Channel: 50.2</figcaption>
+          </figure></a
+        >
 
-        <!-- 50.3 -->
+        <p class="channel-description">
+          ESNE TV is a Spanish Catholic channel that unites all Hispanics
+          transmitting from studios in California. ESNE delivers dynamic,
+          cultural and educational programming for the youth and the whole
+          family.
+        </p>
+      </div>
 
-        <div id="channel50-3" class="channel">
-          <a href="https://thistv.com/" target="_blank"
-            ><img
+      <!-- 50.3 -->
+
+      <div id="channel50-3" class="channel">
+        <a href="https://thistv.com/" target="_blank"
+          ><figure>
+            <img
               src="http://nebula.wsimg.com/3f481fb4cce453dab2ee17fa667867f1?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
               alt=""
-          /></a>
-          <p class="channelNumber">50.2</p>
-          <p class="channelDescription">
-            This TV is a free premium channel that brings you award winning
-            films, box office hits, cult classics, retro TV series and all your
-            favorite Hollywood stars! It doesn't get better than This!
-          </p>
-        </div>
+            />
+            <figcaption class="channel-number">Channel: 50.2</figcaption>
+          </figure></a
+        >
 
-        <!-- 50.4 -->
+        <p class="channel-description">
+          This TV is a free premium channel that brings you award winning films,
+          box office hits, cult classics, retro TV series and all your favorite
+          Hollywood stars! It doesn't get better than This!
+        </p>
+      </div>
 
-        <div id="channel50-4" class="channel">
-          <a href="https://www.sonlifetv.com/domestic_eng.html" target="_blank"
-            ><img
+      <!-- 50.4 -->
+
+      <div id="channel50-4" class="channel">
+        <a href="https://www.sonlifetv.com/domestic_eng.html" target="_blank"
+          ><figure>
+            <img
               src="http://nebula.wsimg.com/a2537f409912a5e035c1cc3b64b8bad6?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
               alt=""
-          /></a>
-          <p class="channelNumber">50.4</p>
-          <p class="channelDescription">
-            Sonlife Broadcasting Network SBN is an extension of Jimmy Swaggart
-            Ministries and the goal of SonLife Broadcasting Network is to reach
-            the world with the Message of the Cross.
-          </p>
-        </div>
+            />
+            <figcaption class="channel-number">Channel: 50.4</figcaption>
+          </figure></a
+        >
 
-        <!-- 50.5 -->
+        <p class="channel-description">
+          Sonlife Broadcasting Network SBN is an extension of Jimmy Swaggart
+          Ministries and the goal of SonLife Broadcasting Network is to reach
+          the world with the Message of the Cross.
+        </p>
+      </div>
 
-        <div id="channel50-5" class="channel">
-          <!-- <a href="https://www.sonlifetv.com/domestic_eng.html" target="_blank"
-            ><img
-              src="http://nebula.wsimg.com/a2537f409912a5e035c1cc3b64b8bad6?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
+      <!-- 50.5 -->
+
+      <div id="channel50-5" class="channel">
+        <!-- <a href="https://www.sonlifetv.com/domestic_eng.html" target="_blank"
+          ><img
+            src="http://nebula.wsimg.com/a2537f409912a5e035c1cc3b64b8bad6?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
+            alt=""
+        /></a> -->
+        <p class="channel-number">Channel: 50.5</p>
+        <p class="channel-description">
+          Festiva Shopping Channel Shop from your living room tv 24 hours a day.
+        </p>
+      </div>
+
+      <!-- 50.6 -->
+
+      <div id="channel50-6" class="channel">
+        <a href="https://watchstadium.com/">
+          <figure>
+            <img
+              src="http://nebula.wsimg.com/2afdbf1086100218187a0989eb7e2f24?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
               alt=""
-          /></a> -->
-          <p class="channelNumber">50.5</p>
-          <p class="channelDescription">
-            Festiva Shopping Channel Shop from your living room tv 24 hours a
-            day.
-          </p>
-        </div>
+            />
+            <figcaption class="channel-number">Channel: 50.6</figcaption>
+          </figure>
+        </a>
 
-        <!-- 50.6 -->
+        <p class="channel-description">
+          Stadium is the ultimate destination for the modern day sports fan; a
+          multi-platform sports network that brings together exclusive live
+          games and events, extensive highlights, classic games, original
+          programming, and daily live studio programming.Type your paragraph
+          here.
+        </p>
+      </div>
 
-        <div id="channel50-6" class="channel">
-          <img
-            src="http://nebula.wsimg.com/2afdbf1086100218187a0989eb7e2f24?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
-            alt=""
-          />
-          <p class="channelNumber">50.6</p>
-          <p class="channelDescription">
-            Stadium is the ultimate destination for the modern day sports fan; a
-            multi-platform sports network that brings together exclusive live
-            games and events, extensive highlights, classic games, original
-            programming, and daily live studio programming.Type your paragraph
-            here.
-          </p>
-        </div>
+      <!-- 50.7 -->
 
-        <!-- 50.7 -->
+      <div id="channel50-7" class="channel">
+        <a href="https://tbd.com/">
+          <figure>
+            <img
+              src="http://nebula.wsimg.com/b8467564741a3b43209a7b7503520778?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
+              alt=""
+            />
+            <figcaption class="channel-number">Channel: 50.7</figcaption>
+          </figure></a
+        >
 
-        <div id="channel50-7" class="channel">
-          <img
-            src="http://nebula.wsimg.com/b8467564741a3b43209a7b7503520778?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
-            alt=""
-          />
-          <p class="channelNumber">50.7</p>
-          <p class="channelDescription">
-            Everything from culinary capers, jaw-dropping action, hilarious
-            pranks and comedy, music, fitness, gaming, or just random
-            awesomeness that you never knew you needed in your life. If it? s
-            what? s new or what? s next, it? s on TBD. Type your paragraph here.
-          </p>
-        </div>
+        <p class="channel-description">
+          Everything from culinary capers, jaw-dropping action, hilarious pranks
+          and comedy, music, fitness, gaming, or just random awesomeness that
+          you never knew you needed in your life. If it? s what? s new or what?
+          s next, it? s on TBD. Type your paragraph here.
+        </p>
+      </div>
 
-        <!-- 50.8 -->
+      <!-- 50.8 -->
 
-        <div id="channel50-8" class="channel">
-          <a href="https://www.radiovidaabundante.com/services3" target="_blank"
-            ><img
+      <div id="channel50-8" class="channel">
+        <a href="https://www.radiovidaabundante.com/services3" target="_blank"
+          ><figure>
+            <img
               src="http://nebula.wsimg.com/4e1744c8bbde0d21819a403c60291e88?AccessKeyId=4B82516446BAA7F46926&disposition=0&alloworigin=1"
               alt=""
-          /></a>
-          <p class="channelNumber">50.8</p>
-          <p class="channelDescription">
-            TELEVIDA ABUNDANTE Spanish language religious programming
-          </p>
-        </div>
+            />
+            <figcaption class="channel-number">Channel: 50.8</figcaption>
+          </figure></a
+        >
 
-        <!-- END CHANNELS -->
+        <p class="channel-description">
+          TELEVIDA ABUNDANTE Spanish language religious programming
+        </p>
       </div>
-    </main>
+    </section>
+    <!-- END CHANNELS -->
 
-    <form action="/email" method="post" id="contactForm">
-      <h2>Say Hello</h2>
-      <input type="text" placeholder="Name" name="userName" />
-      <input type="text" placeholder="Email" name="userEmail" />
-      <input type="text" placeholder="Subject" name="userEmailSubject" />
+    <!-- Contact -->
+    <form id="contact-form">
+      <h2>Get In Touch!</h2>
+      <input type="text" placeholder="Name" name="userName" id="userName" />
+      <input type="text" placeholder="Email" name="userEmail" id="userEmail" />
       <textarea
         name="userEmailMessage"
-        id=""
+        id="userEmailMessage"
         cols="30"
         rows="10"
         placeholder="Message"
         spellcheck="true"
       ></textarea>
 
-      <button type="submit" id="contactBtn" onclick="openModal()">
-        Contact Us
+      <button id="contactBtn" class="shadow">
+        Send Us An Email
       </button>
     </form>
+    <!-- END CONTACT -->
 
-    <div id="simpleModal" class="modal">
-      <div class="modal-content">
-        <span class="closeBtn" onclick="closeModal()">&times;</span>
-        <p>Hello... I am a modal</p>
+    <!-- Modal -->
+    <div class="modal-overlay hide-modal" id="modal-overlay"></div>
+
+    <div class="modal hide-modal" id="modal">
+      <div class="modal-guts">
+        <h2>Thank you for contacting Canal 50</h2>
+        <p>
+          You should hear back from us very soon.
+        </p>
       </div>
     </div>
 
+    <!-- END MODAL -->
+    <!-- Footer -->
     <footer>
-      <p>© 2019 Canal 50</p>
+      <p id="copywrite">
+        Copyright&copy; Canal 50 Phoenix 2020. All Rights Reserved.
+      </p>
+      <p id="built-by">
+        Website built and maintained by: <br />
+        <a href="http://www.goldenstatewebservices.com"
+          >Golden State Web Services</a
+        >
+      </p>
     </footer>
-
+    <!-- END FOOTER -->
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

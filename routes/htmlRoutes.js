@@ -9,11 +9,24 @@ router.post("/email", (req, res) => {
   // console.log("data: ", req.body);
 
   res.json({ message: "Message received!!" });
+});
+
+router.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/index.html"));
+});
+
+router.get("/phoenix-local-television-advertising", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/advertise.html"));
+});
+
+router.post("/phoenix-tv-ads", (req, res) => {
   const msg = {
-    to: "dave@davidprimm.com",
-    from: req.body.userEmail,
-    subject: req.body.userEmailSubject,
-    text: req.body.userEmailMessage
+    to: "contact@canal50phoenix.com",
+    from: req.body.userEmailInput,
+    subject: "[!URGENT] Email From Canal 50 Website",
+    text: `${req.body.userMessageInput}
+    
+    from: ${req.body.userNameInput}`,
   };
   try {
     sgMail.send(msg);
@@ -21,18 +34,7 @@ router.post("/email", (req, res) => {
   } catch (error) {
     console.log(error);
   }
-});
-
-router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
-});
-
-router.get("/advertise", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/advertise.html"));
-});
-
-router.get("/hello", (req, res) => {
-  res.send("Hello World");
+  res.redirect("/");
 });
 
 module.exports = router;

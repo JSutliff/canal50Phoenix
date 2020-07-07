@@ -1,19 +1,46 @@
-const openSlideMenu = () => {
-  document.getElementById("side-menu").style.width = "250px";
-  document.getElementById("tagline").style.marginLeft = "250px";
-};
+// const { post } = require("../../../routes/htmlRoutes");
 
-const closeSlideMenu = () => {
-  document.getElementById("side-menu").style.width = "0px";
-  document.getElementById("tagline").style.marginLeft = "0px";
-};
+document.getElementById("toggleMenu").addEventListener("click", function () {
+  console.log("clicky");
+  document.getElementById("toggler").checked = false;
+});
 
-// const openModal = () => {
-//   const modal = document.getElementById("simpleModal");
-//   modal.style.display = "block";
-// };
+function postData() {
+  let userNameInputElem = document.getElementById("userName");
+  let userEmailInputElem = document.getElementById("userEmail");
+  let userMessageInputElem = document.getElementById("userEmailMessage");
+  let userNameInput = userNameInputElem.value;
+  let userEmailInput = userEmailInputElem.value;
+  let userMessageInput = userMessageInputElem.value;
+  userNameInputElem.value = "";
+  userEmailInputElem.value = "";
+  userMessageInputElem.value = "";
+  const data = { userNameInput, userEmailInput, userMessageInput };
 
-// const closeModal = () => {
-//   const modal = document.getElementById("simpleModal");
-//   modal.style.display = "none";
-// };
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  };
+
+  fetch("/phoenix-tv-ads", options);
+}
+
+document
+  .getElementById("contactBtn")
+  .addEventListener("click", function (event) {
+    let modalBg = document.getElementById("modal-overlay");
+    let modalBody = document.getElementById("modal");
+    postData();
+
+    event.preventDefault();
+    modalBg.classList.remove("hide-modal");
+    modalBody.classList.remove("hide-modal");
+
+    setTimeout(function () {
+      modalBg.classList.add("hide-modal");
+      modalBody.classList.add("hide-modal");
+    }, 2500);
+  });
