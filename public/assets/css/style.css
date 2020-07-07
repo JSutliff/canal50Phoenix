@@ -1,127 +1,317 @@
-body,
-html {
-  height: 100%;
-  background-color: #050616;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow-x: hidden;
-  line-height: 1.6;
+/* CORE STYLES */
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+  /* --overlay-color: rgba(24, 39, 51, 0.85); */
+  --overlay-color: rgb(47, 21, 80, 0.99);
+  --menu-speed: 0.75s;
 }
 
-.hero-image {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../images/hero.jpeg");
-
-  /* Set a specific height */
-  height: 90%;
-
-  /* Position and center the image to scale nicely on all screens */
-  /* background-position: center; */
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navBar {
-  overflow: hidden;
-  height: 63px;
+body {
+  font-family: "Merriweather", serif;
+  line-height: 1.4;
+  background-color: rgb(5, 6, 23);
+}
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.2);
 }
 
-.navBar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+.shadow {
+  box-shadow: 2px 8px 12px 1px rgba(86, 117, 116, 0.45);
+}
+
+/* Hamburger Menu */
+.btn {
+  display: inline-block;
+  border: none;
+  /* background: var(--primary-color); */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
   text-decoration: none;
-  font-size: 17px;
 }
 
-.navBar ul {
-  margin: 8px 0 0 0;
-  list-style: none;
+.btn:hover {
+  opacity: 0.7;
 }
 
-.navBar a:hover {
-  color: #7a3437;
-}
-
-.side-nav {
-  height: 100%;
-  width: 0;
+/* MENU STYLES */
+.menu-wrap {
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
-  opacity: 0.9;
-  overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.5s;
+  z-index: 10;
 }
 
-.side-nav a {
-  padding: 10px 10px 10px 30px;
-  text-decoration: none;
-  font-size: 22px;
-  color: #ccc;
-  display: block;
-  transition: 0.3s;
+.menu-wrap .toggler {
+  position: absolute;
+  top: 10;
+  left: 0;
+  z-index: 20;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
 }
 
-.side-nav a:hover {
-  color: #fff;
-}
-
-.side-nav .btn-close {
+.menu-wrap .hamburger {
   position: absolute;
   top: 0;
-  right: 22px;
-  font-size: 36px;
-  margin-left: 50px;
+  left: 0;
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  /* background: var(--primary-color); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#tagline {
-  transition: margin-left 0.5s;
-  padding: 20px;
-  overflow: hidden;
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
 
-  text-align: center;
+/* Hamburger Lines - Top & Bottom */
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after {
+  content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  z-index: 10;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
 }
 
-#tagline button {
-  background-color: goldenrod;
-  padding: 12px;
-  border-radius: 5px;
-  font-size: 18px;
-  border: 0;
-  box-shadow: 2px 2px 7px 4px #d0d0d0;
+/* Moves Line Down */
+.menu-wrap .hamburger > div::after {
+  top: 10px;
 }
 
-#tagline button:hover {
-  cursor: pointer;
+/* Toggler Animation */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
 }
 
-#channelContainer {
-  width: 80%;
-  color: white;
+/* Turns Lines Into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+/* Rotate On Hover When Checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: var(--overlay-color);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.hide-responsive {
+  display: none;
+}
+
+#toggleMenu img {
+  margin-bottom: 0px;
+}
+/* END HAMBURGER MENU */
+
+/* SHowcase */
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.showcase {
+  /* background: var(--primary-color); */
+  color: #fff;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.showcase:before {
+  content: "";
+  background: url("../images/hero.jpeg") no-repeat center center/cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.showcase .showcase-inner {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.showcase h1 {
+  font-size: 3.5rem;
+  color: white;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background: white;
+  color: rgb(47, 21, 77);
+  border-radius: 5px;
+  border: solid #fff 1px;
+  margin-top: 25px;
+  opacity: 0.7;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.cta-btn:hover {
+  background-color: lightgray;
+}
+
+.cta-btn:active {
+  transform: translateY(4px);
+}
+
+#header-img {
+  width: 250px;
+  margin-top: -90px;
+  /* margin-bottom: -50px; */
+}
+
+#tag-line {
+  /* margin-top: -60px; */
+  font-size: 2rem;
+  font-style: italic;
+}
+/* END SHOWCASE */
+
+/* Channels */
+#channel-display {
+  width: 80%;
   margin: 0 auto;
   text-align: center;
+  margin-top: 50px;
 }
 
-.channelNumber {
-  font-size: 26px;
+#channel-display a:link {
+  color: rgb(85, 26, 139);
 }
 
-.channelDescription {
-  font-size: 20px;
+.channel {
+  color: white;
+  margin-bottom: 100px;
+}
+
+.channel-number {
+  font-size: 2rem;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: white;
+  text-decoration: none;
+}
+
+.channel-description {
+  font-size: 1.5rem;
+}
+/* END CHANNELS */
+/* Contact */
+
+/* END CONTACT */
+
+/* Footer */
+/* END FOOTER */
+.section-title {
+  margin-bottom: 50px;
+  color: white;
+  font-size: 2rem;
 }
 
 form {
@@ -132,6 +322,11 @@ form {
   width: 80%;
   margin: 0 auto;
   border: 0;
+}
+
+form h2 {
+  margin-bottom: 50px;
+  font-size: 3rem;
 }
 
 form input {
@@ -162,63 +357,159 @@ form textarea:focus {
 
 form button {
   margin-bottom: 10px;
-  padding: 12px;
+  padding: 0.75rem 1rem;
   border-radius: 5px;
   font-size: 18px;
-  background-color: #707a91;
+  background-color: rgb(198, 195, 208);
+  color: rgb(47, 21, 77);
   border: 0;
+  font-size: 1.5rem;
 }
 
 form button:hover {
   cursor: pointer;
+  background-color: rgb(157, 156, 160);
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+form button:active {
+  transform: translateY(4px);
 }
 
-.modal-content {
-  background-color: #f4f4f4;
-  margin: 20% auto;
-  padding: 20px;
-  width: 70%;
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-}
-
-.closeBtn {
-  color: #ccc;
-  float: right;
-  font-size: 30px;
-}
-
-.closeBtn:hover,
-.closeBtn:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+#contact-form {
+  margin-bottom: 100px;
 }
 
 footer {
-  margin-top: 20px;
-  padding: 12px;
-  width: 100%;
-  font-size: 17px;
-  background-color: #050616;
-  color: #321c47;
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
+  color: lightgray;
+  margin-bottom: 50px;
 }
 
-@media (max-width: 700px) {
-  .navBar-items {
+#built-by a {
+  color: goldenrod;
+}
+
+#advertise-form {
+  margin-bottom: 100px;
+}
+
+#advertise-form h1 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-size: 3rem;
+}
+
+#advertise-form img {
+  margin-bottom: -190px;
+  align-self: center;
+}
+
+#advertise-description {
+  font-size: 1.5rem;
+  margin-bottom: 100px;
+}
+
+.modal {
+  /* This way it could be display flex or grid or whatever also. */
+  display: block;
+
+  /* Probably need media queries here */
+  width: 600px;
+  max-width: 100%;
+
+  height: 150px;
+  max-height: 100%;
+
+  position: fixed;
+
+  z-index: 100;
+
+  left: 50%;
+  top: 50%;
+
+  /* Use this for centering if unknown width/height */
+  transform: translate(-50%, -50%);
+
+  /* If known, negative margins are probably better (less chance of blurry text). */
+  /* margin: -200px 0 0 -200px; */
+
+  background: white;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+
+  text-align: center;
+}
+.closed {
+  display: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+
+  background: rgba(0, 0, 0, 0.6);
+}
+.modal-guts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 20px 50px 20px 20px;
+  font-size: 1.1rem;
+}
+
+.hide-modal {
+  display: none;
+}
+
+/* MEIDA QUERY */
+@media only screen and (min-width: 700px) {
+  .hide-responsive {
+    display: block;
+  }
+
+  .showcase h1 {
+    font-size: 5rem;
+  }
+
+  #top-nav {
+    /* background-color: red; */
+    height: 5.4rem;
+  }
+
+  #top-nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #top-nav a {
+    color: #333333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 1.7rem;
+
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .menu-wrap {
     display: none;
+  }
+
+  footer p {
+    width: 80%;
+    margin: 0 auto;
   }
 }
