@@ -15,6 +15,10 @@ router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
+router.get("/espanol", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/espanol.html"));
+});
+
 router.get("/phoenix-local-television-advertising", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/advertise.html"));
 });
