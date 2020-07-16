@@ -23,6 +23,10 @@ router.get("/phoenix-local-television-advertising", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/advertise.html"));
 });
 
+router.get("/publicidad-en-television-local-phoenix", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/advertise-espanol.html"));
+});
+
 router.post("/phoenix-tv-ads", (req, res) => {
   const msg = {
     to: "dave@davidprimm.com",
