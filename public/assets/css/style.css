@@ -539,6 +539,7 @@ footer {
     font-size: 1.1rem;
     position: absolute;
     left: 60px;
+    top: 100px;
   }
 
   footer p {
